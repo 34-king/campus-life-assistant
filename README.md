@@ -1,89 +1,83 @@
-# 🏫 校园生活助手 - Campus Life Assistant
+#  校园生活助手 - Campus Life Assistant
 
-> 移动应用开发实践课程（Vibe Coding版）期末项目
+> **移动应用开发实践课程（Vibe Coding版）期末项目**
 > **河南理工大学** · 2026年春季 · 任建吉老师
 
 ---
 
-## 📱 项目概述
+## 项目概述
 
-一款面向高校学生的跨平台校园生活助手 App，使用 **Flutter 3.x** 开发，支持 **Android/iOS/Web** 平台运行。
+一款面向高校学生的跨平台校园生活助手 App，使用 **Flutter 3.x** 开发，支持 **Android** 平台运行。
 
-### 核心功能
+### 核心功能（9大页面）
 
-| 功能 | 页面 | 说明 |
-|------|------|------|
-| 🏠 智能首页 | `home_page.dart` | 实时天气、今日课程、快捷入口 |
-| 📚 课程表 | `schedule_page.dart` | 周课表网格视图，彩色课程卡片 |
-| 🍽 食堂菜单 | `canteen_page.dart` | 按食堂筛选、搜索菜品、收藏 |
-| 📰 校园公告 | `notice_page.dart` | 公告列表、详情弹窗、收藏 |
-| 💳 校园卡 | `card_page.dart` | 虚拟校园卡、余额、交易流水 |
-| 📋 成绩查询 | `grade_page.dart` | 按学期查看成绩、GPA 统计 |
-| 📅 校历 | `calendar_page.dart` | 月视图日历、事件标记 |
-| 🗺 校园地图 | `map_page.dart` | 主要建筑网格展示、详情弹窗 |
-| 👤 个人中心 | `profile_page.dart` | 个人信息、快捷入口 |
-| ❤️ 我的收藏 | `favorites_page.dart` | 菜品和公告的统一收藏管理 |
-| ⚙️ 设置 | `settings_page.dart` | 深色模式切换、通知、字号 |
-| 🎬 启动页 | `splash_page.dart` | 品牌动画，2秒自动跳转 |
+| 页面 | 功能说明 |
+|------|---------|
+| 智能首页 | 实时天气（wttr.in API）、今日课程卡片、6个快捷入口 |
+| 课程表 | 周视图网格，彩色课程卡片，按节次/天排列 |
+| 食堂菜单 | 按食堂Tab筛选，菜品收藏 |
+| 校园公告 | 公告列表，底部弹窗查看详情，收藏 |
+| 校园卡 | 虚拟校园卡（余额、学生信息）、交易流水 |
+| 成绩查询 | 按学期查看成绩、GPA统计、分数环形指示器 |
+| 校历 | 月视图日历，假期/考试/活动事件标记 |
+| 校园地图 | 主要建筑网格展示，点击查看详情 |
+| 个人中心 | 个人信息、成绩查询入口、收藏管理、设置 |
 
 ---
 
-## 🛠 技术栈
+## 技术栈
 
 | 技术 | 用途 |
 |------|------|
 | **Flutter 3.41.9** | 跨平台 UI 框架 |
 | **Dart 3.11** | 开发语言 |
-| **Material Design 3** | UI 设计规范 |
-| **Provider** | 状态管理 |
+| **Material Design 3** | UI 设计规范（useMaterial3） |
+| **Provider** | 状态管理（ChangeNotifierProvider） |
 | **SharedPreferences** | 本地数据持久化 |
-| **HTTP** | 实时天气数据 (wttr.in) |
+| **HTTP (wttr.in API)** | 实时天气数据获取 |
 | **Git** | 版本控制 |
 
 ---
 
-## 📁 项目结构
+## 项目结构
 
 ```
 xyshzsapp/
 ├── lib/
-│   ├── main.dart              # 应用入口 + 路由
+│   ├── main.dart                     # 应用入口 + 路由 + 底部导航
 │   ├── models/
-│   │   └── school_data.dart   # 数据模型 + 模拟数据
+│   │   └── school_data.dart          # 数据模型 + 模拟数据（课程/菜品/公告/交易/成绩/校历）
 │   ├── providers/
-│   │   ├── favorites_provider.dart  # 收藏状态管理
-│   │   └── theme_provider.dart      # 主题切换管理
-│   ├── pages/
-│   │   ├── splash_page.dart   # 启动动画页
-│   │   ├── home_page.dart     # 首页（天气+课程+快捷入口）
-│   │   ├── schedule_page.dart # 课程表
-│   │   ├── canteen_page.dart  # 食堂菜单
-│   │   ├── notice_page.dart   # 校园公告
-│   │   ├── card_page.dart     # 校园卡
-│   │   ├── grade_page.dart    # 成绩查询
-│   │   ├── calendar_page.dart # 校历
-│   │   ├── map_page.dart      # 校园地图
-│   │   ├── profile_page.dart  # 个人中心
-│   │   ├── favorites_page.dart# 我的收藏
-│   │   └── settings_page.dart # 设置页
-│   └── widgets/               # 公共组件（预留）
-├── android/                   # Android 平台配置
+│   │   ├── favorites_provider.dart   # 收藏状态管理（菜品+公告）
+│   │   └── theme_provider.dart       # 主题切换（浅色/深色/跟随系统）
+│   └── pages/
+│       ├── splash_page.dart          # 启动动画页
+│       ├── home_page.dart            # 首页（天气+课程+快捷入口）
+│       ├── schedule_page.dart        # 课程表（周视图）
+│       ├── canteen_page.dart         # 食堂菜单（Tab筛选+收藏）
+│       ├── notice_page.dart          # 校园公告
+│       ├── card_page.dart            # 校园卡（余额+交易流水）
+│       ├── grade_page.dart           # 成绩查询（GPA统计）
+│       ├── calendar_page.dart        # 校历（月视图+事件）
+│       ├── map_page.dart             # 校园地图
+│       ├── profile_page.dart         # 个人中心
+│       ├── favorites_page.dart       # 我的收藏
+│       └── settings_page.dart        # 设置（深色模式）
+├── android/                          # Android 平台配置
 ├── test/
-│   └── widget_test.dart       # 基础 Widget 测试
-├── pubspec.yaml               # 依赖配置
-└── README.md                  # 本文件
+│   └── widget_test.dart              # Widget 测试
+└── pubspec.yaml                      # 依赖配置
 ```
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
 ### 环境要求
 
 - Flutter SDK 3.x
 - Dart SDK 3.x
 - Android SDK (API 21+)
-- 可选：Xcode (iOS 构建)
 
 ### 安装运行
 
@@ -95,120 +89,67 @@ cd xyshzsapp
 # 2. 安装依赖
 flutter pub get
 
-# 3. 运行（Android）
+# 3. 运行（连接 Android 设备后）
 flutter run
 
-# 4. 运行（Web）
-flutter run -d chrome
-```
-
-### 构建 APK
-
-```bash
+# 4. 构建 APK
 flutter build apk --debug
-# 输出路径: build/app/outputs/flutter-apk/app-debug.apk
+# APK 路径：build/app/outputs/flutter-apk/app-debug.apk
 ```
 
 ---
 
-## 🤖 AI 协作说明
+## 课程要求对照
 
-本项目开发全程使用 **Trae AI IDE** 辅助编码。
-
-### 代码标注规则
-
-每个源文件头部标注了 AI 参与度：
-
-- `// 🤖 AI Generated` — AI 直接生成的代码
-- `// ✏️ Human Modified` — 人工修改过的部分
-- `// 📝 Human Written` — 手写的代码
-
-### 典型协作流程
-
-1. **需求描述** → 在 Trae AI Chat 中描述功能需求
-2. **AI 生成** → AI 生成初始代码
-3. **人工审查** → 检查代码逻辑，调整 UI 细节
-4. **整合测试** → 整合到项目，运行测试
-5. **迭代优化** → 重复上述步骤
-
-### 使用的 Prompt 模板
-
-详见 [附录：Prompt 模板](./docs/prompts.md)
-
----
-
-## 📊 课程要求对照
-
-| 要求 | 状态 | 实现说明 |
+| 要求 | 状态 | 实现方式 |
 |------|------|---------|
-| Flutter 3.x + Android API 21+ | ✅ | Flutter 3.41.9, minSdk自动适配 |
-| 3-5个核心页面 | ✅ | 12个页面 |
-| Material Design 3 | ✅ | colorSchemeSeed + useMaterial3 |
-| 深色模式 | ✅ | ThemeMode.system + 手动切换 |
-| 本地持久化 | ✅ | SharedPreferences 收藏/主题持久化 |
-| 网络数据交互 | ✅ | wttr.in 实时天气 API |
+| Flutter 3.x + Android API 21+ | ✅ | Flutter 3.41.9 |
+| 3-5个核心页面 | ✅ | 实际12个页面 |
+| Material Design 3 | ✅ | `useMaterial3: true` + `colorSchemeSeed` |
+| 深色模式切换 | ✅ | ThemeProvider + SharedPreferences 持久化 |
+| 本地数据持久化 | ✅ | SharedPreferences（收藏/主题/通知/字体） |
+| 网络数据交互 | ✅ | wttr.in API 实时天气（JSON） |
 | Provider 状态管理 | ✅ | FavoritesProvider + ThemeProvider |
-| AI 协作开发 | ✅ | Trae IDE 全程辅助 |
 | Git 版本控制 | ✅ | 本仓库 |
-| APK 可安装包 | ✅ | `flutter build apk --debug` |
-| 鸿蒙适配方案 | 📝 | 见下方 |
-
-### 鸿蒙适配方案（HarmonyOS NEXT）
-
-如需适配鸿蒙系统，有以下两种方案：
-
-**方案 A：Flutter 跨平台（推荐快速适配）**
-```yaml
-# 在 pubspec.yaml 中添加鸿蒙平台支持
-# 当前 Flutter 3.41 已实验性支持 HarmonyOS
-flutter build harmonyos
-```
-
-**方案 B：ArkTS 重写核心页面**
-将以下核心页面使用 ArkTS + DevEco Studio 重写：
-- `home_page.dart` → `pages/HomePage.ets`
-- `canteen_page.dart` → `pages/CanteenPage.ets`
-- `schedule_page.dart` → `pages/SchedulePage.ets`
+| 可安装 APK | ✅ | flutter build apk --debug |
+| AI 协作开发 | ✅ | Trae AI IDE 辅助编码 |
 
 ---
 
-## 📝 技术要点
+## 数据模型
 
-### 状态管理架构
-```
-ChangeNotifierProvider
-  ├── FavoritesProvider  ← 收藏状态（菜品/公告）
-  └── ThemeProvider      ← 主题模式（浅色/深色/跟随系统）
-```
+### 课程（Course）
+- name, teacher, classroom, dayOfWeek, startSlot, duration, weeks
 
-### 数据流
-```
-MOCK DATA → Provider → Consumer Widget → UI
-   ↑                          |
-   └──────────────────────────┘ (setState/notifyListeners)
-```
+### 菜品（Dish）
+- name, canteen, price, rating, description
 
-### 本地存储
+### 公告（Notice）
+- title, date, content, category
+
+### 校园卡交易（CardTransaction）
+- time, location, amount, balance, isIncome
+
+### 成绩（GradeRecord）
+- courseName, credit, score, gradePoint, semester
+
+### 校历事件（CalendarEvent）
+- date, title, type（holiday/exam/activity/academic）
+
+---
+
+## 状态管理架构
+
 ```
-SharedPreferences
-  ├── favorite_dishes: List<String>
-  ├── favorite_notices: List<String>
-  ├── theme_mode: String
-  ├── notifications_enabled: bool
-  └── font_scale_index: int
+ChangeNotifierProvider (MaterialApp 外层)
+  ├── FavoritesProvider ← SharedPreferences ← 菜品/公告收藏
+  └── ThemeProvider     ← SharedPreferences ← 主题模式/通知/字体
 ```
 
 ---
 
-## 👨‍💻 作者
+## 作者
 
-- **开发者**：张同学
+- **开发者**：河南理工大学 计算机科学与技术 张同学
 - **指导老师**：任建吉
-- **学校**：河南理工大学
 - **时间**：2026年春季学期
-
----
-
-## 📜 开源协议
-
-本项目仅供学习交流使用。
