@@ -1,0 +1,31 @@
+# Flutter
+.dart_tool/
+build/
+*.iml
+.gradle
+/local.properties
+/.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Android
+/android/.gradle
+/captures
+.externalNativeBuild
+.cxx
+
+# Build outputs
+*.apk
+*.aab
+*.hprof
+
+# IDE
+.metadata
+*.swp
+*.swo
+
+# Misc
+*~
+*.log
