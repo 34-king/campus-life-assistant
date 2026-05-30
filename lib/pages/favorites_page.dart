@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Favorites list (dishes + notices).
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/favorites_provider.dart';

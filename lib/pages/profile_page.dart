@@ -1,3 +1,4 @@
+﻿// [AI-GEN] User profile and menu entries.
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {

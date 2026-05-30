@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Grade query with GPA calculation.
 import 'package:flutter/material.dart';
 import '../models/school_data.dart';
 

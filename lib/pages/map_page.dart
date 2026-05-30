@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Campus map with building grid.
 import 'package:flutter/material.dart';
 
 class _Building {

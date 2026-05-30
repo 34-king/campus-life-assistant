@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Basic widget test.
 import 'package:flutter_test/flutter_test.dart';
 import 'package:xyshzsapp/main.dart';
 

@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Theme management with persistence.
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

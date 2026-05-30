@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Calendar view with event markers.
 import 'package:flutter/material.dart';
 import '../models/school_data.dart';
 

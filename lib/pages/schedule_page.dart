@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Weekly schedule grid view.
 import 'package:flutter/material.dart';
 import '../models/school_data.dart';
 

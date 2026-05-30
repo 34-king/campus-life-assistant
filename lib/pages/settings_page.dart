@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Settings with theme toggle.
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';

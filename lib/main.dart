@@ -1,3 +1,4 @@
+﻿// [AI-GEN] App entry, routing, theme config. [HUMAN] MultiProvider setup, route additions.
 // 🤖 AI Generated — 主入口文件（Trae AI 根据需求生成）
 // ✏️ Human Modified — 添加了 MultiProvider、路由配置、主题消费者
 

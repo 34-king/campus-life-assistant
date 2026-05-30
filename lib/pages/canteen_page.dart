@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Canteen menu with tabs and favorites.
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/school_data.dart';

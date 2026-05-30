@@ -1,4 +1,5 @@
-﻿import 'package:flutter/material.dart';
+﻿// [AI-GEN] Splash screen with fade animation.
+import 'package:flutter/material.dart';
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
   @override State<SplashPage> createState() => _SplashPageState();

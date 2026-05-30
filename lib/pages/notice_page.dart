@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Notice list with detail bottom sheet.
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/school_data.dart';

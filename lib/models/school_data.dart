@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Data models and mock data. [HUMAN] Added card/grade/calendar models.
 // 🤖 AI Generated — 数据模型与模拟数据
 // ✏️ Human Modified — 添加了校园卡、成绩、校历三大新功能的数据模型
 // ✏️ 模拟数据改为河南理工大学实际场景

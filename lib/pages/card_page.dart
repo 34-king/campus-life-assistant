@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Virtual campus card with balance and transactions.
 import 'package:flutter/material.dart';
 import '../models/school_data.dart';
 

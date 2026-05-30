@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Home page layout. [HUMAN] Real-time weather API (wttr.in) implementation.
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;

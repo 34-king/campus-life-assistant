@@ -1,3 +1,4 @@
+﻿// [AI-GEN] Favorites state management. [HUMAN] Added SharedPreferences persistence.
 // 🤖 AI Generated — Provider 状态管理（收藏 + 持久化）
 // ✏️ Human Modified — 添加了 SharedPreferences 持久化
 
