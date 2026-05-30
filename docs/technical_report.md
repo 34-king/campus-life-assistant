@@ -264,3 +264,13 @@ struct HomePage {
 - [SharedPreferences](https://pub.dev/packages/shared_preferences)
 - [wttr.in Weather API](https://wttr.in)
 - [Trae AI IDE](https://trae.ai)
+
+
+---
+
+## 作者信息
+
+- **开发者**：魏豪（学号：312320020230）
+- **指导老师**：任建吉
+- **学校**：河南理工大学
+- **时间**：2026年春季学期
